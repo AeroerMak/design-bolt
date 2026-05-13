@@ -566,6 +566,58 @@ ul { list-style: none; }
   50%       { transform: translateY(-10px) rotate(1.5deg); }
 }
 
+@keyframes floatC {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%       { transform: translateY(-13px) rotate(-3deg); }
+}
+
+@keyframes floatD {
+  0%, 100% { transform: translateY(0) rotate(2.5deg); }
+  50%       { transform: translateY(-16px) rotate(2.5deg); }
+}
+
+@keyframes floatE {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50%       { transform: translateY(-11px) rotate(-1deg); }
+}
+
+/* Floating tool icons in hero visual */
+.tool-float {
+  position: absolute;
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-float svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.tool-float--ps {
+  top: 88px;
+  left: 4px;
+  animation: floatC 8s ease-in-out infinite 0.5s;
+}
+
+.tool-float--ai {
+  bottom: 128px;
+  right: -4px;
+  animation: floatD 9s ease-in-out infinite 2.4s;
+}
+
+.tool-float--figma {
+  bottom: 28px;
+  right: 80px;
+  animation: floatE 7.5s ease-in-out infinite 1.0s;
+}
+
 .fc-label {
   font-size: 0.75rem;
   font-weight: 500;
